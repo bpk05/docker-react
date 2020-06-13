@@ -17,6 +17,7 @@ RUN npm run build
 
 #Specify a base image for 2nd phase build
 From nginx
+EXPOSE 80
 
 #Dumping the content created in previous stage
 COPY --from=builder /app/build /usr/share/nginx/html
